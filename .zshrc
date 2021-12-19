@@ -117,4 +117,4 @@ fi
 
 export PATH="$HOME/.poetry/bin:$PATH"
 
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
