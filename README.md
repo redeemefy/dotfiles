@@ -7,7 +7,22 @@ There are many ways one can manage dotfiles, from individual git repos for each 
 ➜ git init --bare $HOME/dotfiles
 ➜ vim ~/.oh-my-zsh/custom/dotfiles.zsh
 // add this alias 
-➜ alias dotfiles="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
+alias dotfiles="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 ➜ source ~/.zshrc
 ➜ dotfiles config --local status.showUntrackedFiles no
+```
+
+In order to add `~/.oh-my-zsh/custom` to the dotfiles repo, I had to changed `$ZSH_CUSTOM` variable in `~/.zshrc` and move `~/.oh-my-zsh/custom` to `~/.config/ohmyzsh`. 
+
+```shell
+➜ mv .oh-my-zsh/custom/* .config/ohmyzsh/custom
+➜ vim ~/.zshrc
+// modify this line
+ZSH_CUSTOM=$HOME/.config/ohmyzsh/custom
+➜ dotfiles add .zshrc
+➜ dotfiles add ~/.config/ohmyzsh/
+➜ dotfiles add ~/.config/lvim/
+➜ dotfiles commit -m "Add .zshrc ohmyzsh/custom and lvim"
+// assuming I already have a dotfiles repo 
+➜ dotfiles push origin dotfiles
 ```
