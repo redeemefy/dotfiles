@@ -5,7 +5,7 @@ alias et3="exa --tree --level=3"
 alias vim=nvim
 
 alias sz="source ~/.zshrc"
-alias ca="lvim ~/.oh-my-zsh/custom/alias.zsh"
+alias ca="lvim ~/.config/ohmyzsh/custom/alias.zsh"
 
 # PYTHON
 alias venv:init="python -m venv .venv"
