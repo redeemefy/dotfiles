@@ -8,13 +8,13 @@ echo  "=============== INSTALLING HOMEBREW ==============="
 echo  "=============== INSTALLING OSX CLI TOOLS ==============="
 xcode-select --install
 
-# Install Mac apps
-echo  "=============== INSTALLING OSX APPS ==============="
-brew cask install 1password iterm2 docker spectacle 
-
 # Install system utils
 echo  "=============== INSTALLING SYSTEM APPS/UTILS ==============="
-brew install git openssl readline sqlite3 xz zlib neovim jq zsh fzf ripgrep exa
+brew install git openssl readline sqlite3 xz zlib neovim jq zsh fzf ripgrep exa lazygit lazydocker
+
+# Install Mac apps
+echo  "=============== INSTALLING OSX APPS ==============="
+brew install --cask 1password iterm2 docker spectacle slack discord
 
 # Install OH-MY-ZSH
 echo  "=============== INSTALLING OH-MY-ZSH ==============="
@@ -32,8 +32,13 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 echo  "=============== INSTALLING RUST & CARGO ==============="
 curl https://sh.rustup.rs -sSf | sh
 
+# Install useful key bindings and fzf completion
 echo  "=============== FZF SETUP ==============="
 $(brew --prefix)/opt/fzf/install
+
+# Install gobrew for managing go versions
+echo  "=============== INSTALLING GOBREW ==============="
+curl -L https://raw.github.com/grobins2/gobrew/master/tools/install.sh | sh
 
 echo  "=============== DOTFILES SETUP ==============="
 mkdir $HOME/dotfiles
@@ -49,9 +54,11 @@ echo  "=============== INSTALLING PYTHON ==============="
 pyenv install 3.9.0
 echo  "=============== UPGRADING PIP ==============="
 python -m pip install --upgrade pip
-Better history search with fzf
 
 # Install NODE LTS
 echo  "=============== INSTALLING NODE LTS ==============="
 nvm install --lts
 
+# Install Go
+echo  "=============== INSTALLING GO ==============="
+gobrew install 1.17
