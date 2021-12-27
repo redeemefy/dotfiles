@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# Install Homebrew
+echo  "=============== INSTALLING HOMEBREW ==============="
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install OSX CLI Tools
+echo  "=============== INSTALLING OSX CLI TOOLS ==============="
+xcode-select --install
+
+# Install Mac apps
+echo  "=============== INSTALLING OSX APPS ==============="
+brew cask install 1password iterm2 docker spectacle 
+
+# Install system utils
+echo  "=============== INSTALLING SYSTEM APPS/UTILS ==============="
+brew install git openssl readline sqlite3 xz zlib neovim jq zsh fzf ripgrep exa
+
+# Install OH-MY-ZSH
+echo  "=============== INSTALLING OH-MY-ZSH ==============="
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install pyenv
+echo  "=============== INSTALLING PYENV ==============="
+curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+
+# Install nvm
+echo  "=============== INSTALLING NVM ==============="
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+# Install Rust & Cargo
+echo  "=============== INSTALLING RUST & CARGO ==============="
+curl https://sh.rustup.rs -sSf | sh
+
+echo  "=============== FZF SETUP ==============="
+$(brew --prefix)/opt/fzf/install
+
+echo  "=============== DOTFILES SETUP ==============="
+mkdir $HOME/dotfiles
+git clone --bare https://github.com/redeemefy/dotfiles.git $HOME/dotfiles
+alias dotfiles=/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME
+dotfiles checkout
+dotfiles config --local status.showUntrackedFiles no
+
+source $HOME/.zshrc
+
+# Install Python
+echo  "=============== INSTALLING PYTHON ==============="
+pyenv install 3.9.0
+echo  "=============== UPGRADING PIP ==============="
+python -m pip install --upgrade pip
+Better history search with fzf
+
+# Install NODE LTS
+echo  "=============== INSTALLING NODE LTS ==============="
+nvm install --lts
+
