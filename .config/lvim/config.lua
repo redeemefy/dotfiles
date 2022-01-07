@@ -13,6 +13,7 @@ require "user.keybindings"
 
 -- LSP
 require "user.python"
+-- require "ftplugin.python"
 
 -- lvim.colorscheme = "onedarker"
 

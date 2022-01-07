@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/gilbertodiaz/.oh-my-zsh"
+export ZSH="/Users/redeemefy/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -71,6 +71,8 @@ ZSH_CUSTOM=$HOME/.config/ohmyzsh/custom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    brew
+    docker
     git 
     golang
     fzf 
@@ -110,12 +112,14 @@ source $ZSH/oh-my-zsh.sh
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 autoload -Uz compinit
-if [ "$(whoami)" = "gilbertodiaz" ]; then
+if [ "$(whoami)" = "redeemefy" ]; then
   compinit -i
 else
   compinit
 fi
 
-export PATH="$HOME/.poetry/bin:$PATH"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

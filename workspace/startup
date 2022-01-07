@@ -3,6 +3,9 @@
 # Install Homebrew
 echo  "=============== INSTALLING HOMEBREW ==============="
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/redeemefy/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 
 # Install OSX CLI Tools
 echo  "=============== INSTALLING OSX CLI TOOLS ==============="
@@ -62,3 +65,7 @@ nvm install --lts
 # Install Go
 echo  "=============== INSTALLING GO ==============="
 gobrew install 1.17
+
+# Install poetry
+echo  "=============== INSTALLING POETRY ==============="
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -

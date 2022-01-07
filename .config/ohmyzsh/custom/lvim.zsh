@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH="/Users/gilbertodiaz/.local/bin:$PATH"
+export PATH="/Users/redeemefy/.local/bin:$PATH"
 
 # Update LunarVim from any directory
 function lvim:update() {
