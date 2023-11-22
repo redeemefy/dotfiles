@@ -1,5 +1,3 @@
-kitty @ source $HOME/.zshrc
-
 font_family      Operator Mono Book
 bold_font        Operator Mono Medium
 italic_font      Operator Mono Book Italic
@@ -65,9 +63,3 @@ symbol_map U+2500-U+259F Symbols Nerd Font # Box Drawing
 # nonicons contains icons in the range: U+F101-U+F27D
 # U+F167 is HTML logo, but YouTube logo in Symbols Nerd Font
 symbol_map U+F102,U+F116-U+F118,U+F12F,U+F13E,U+F1AF,U+F1BF,U+F1CF,U+F1FF,U+F20F,U+F21F-U+F220,U+F22E-U+F22F,U+F23F,U+F24F,U+F25F nonicons
-
-
-# BEGIN_KITTY_THEME
-# Catppuccin-Frappe
-include current-theme.conf
-# END_KITTY_THEME
