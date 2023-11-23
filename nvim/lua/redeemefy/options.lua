@@ -1,8 +1,8 @@
 local o = vim.opt
 
-o.shiftwidth = 2
-o.tabstop = 2
-o.softtabstop = 2
+o.shiftwidth = 4
+o.tabstop = 4
+o.softtabstop = 4
 o.smartindent = true
 o.wrap = false
 o.number = true
@@ -10,10 +10,11 @@ o.relativenumber = true
 o.wildmode = 'longest:full,full'                -- complete the longest common match, and allow tabbing the result to fully complete them
 o.mouse = 'a'                                   -- enable mouse for all modes
 o.termguicolors = true
-o.title = true
+-- o.spell = true
 o.ignorecase = true
 o.smartcase = true
-o.list = true                                   -- enable the below listchars
+o.list = false                                  -- show tabs and spaces
+o.listchars = { tab = "- ", trail = "." }       -- character to show for tabs and spaces
 o.fillchars:append({ eob = ' ' })               -- remove ~ from end of the buffer
 o.splitbelow = true
 o.splitright = true

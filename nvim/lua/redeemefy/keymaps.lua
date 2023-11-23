@@ -10,6 +10,11 @@ local k = vim.keymap
 -- Easier way to go normal mode
 k.set('i', 'jj', '<ESC>')
 
+-- Open nvim setting files
+k.set('n', '<leader>nk', ':e ~/workspace/dotfiles/nvim/lua/redeemefy/keymaps.lua<CR>')
+k.set('n', '<leader>np', ':e ~/workspace/dotfiles/nvim/lua/redeemefy/plugins.lua<CR>')
+k.set('n', '<leader>no', ':e ~/workspace/dotfiles/nvim/lua/redeemefy/options.lua<CR>')
+
 -- Easier way to write/save a file
 k.set('n', '<Leader>s', ':w<CR>')
 
@@ -20,6 +25,15 @@ k.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true })
 -- Better for indenting code manually
 k.set('v', '<', '<gv')
 k.set('v', '>', '>gv')
+k.set('n', '<Leader>ri', '<ESC>ffVG=')
+
+-- Buffer management
+k.set('n', '<Leader>bn', ':bn<CR>')
+k.set('n', '<Leader>bp', ':bp<CR>')
+
+-- Window navigation
+k.set('n', '<C-h>', '<C-w>h')
+k.set('n', '<C-l>', '<C-w>l')
 
 -- When replacing discard deleted item
 k.set('v', 'p', '"_dP')
