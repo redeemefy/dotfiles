@@ -12,6 +12,7 @@ o.wildmode = 'longest:full,full'                -- complete the longest common m
 o.mouse = 'a'                                   -- enable mouse for all modes
 o.termguicolors = true
 -- o.spell = true
+o.cursorline = true
 o.ignorecase = true
 o.smartcase = true
 o.list = false                                  -- show tabs and spaces
