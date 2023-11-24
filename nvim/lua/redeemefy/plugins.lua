@@ -47,13 +47,19 @@ use({
       fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
       bg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
     })
+    -- Change telescope border line colors
+    vim.api.nvim_set_hl(0, 'CursorLineBg', {
+      fg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
+      bg = vim.api.nvim_get_hl_by_name('CursorLine', true).background,
+    })
   end
 })
 
 -- packer manages itself
 use('wbthomason/packer.nvim')
+
 -- easier comments
--- use('tpope/vim-commentary')
+use('tpope/vim-commentary')
 
 -- Add, change, and delete sorrounding text.
 use('tpope/vim-surround')
@@ -82,6 +88,18 @@ use({
   'famiu/bufdelete.nvim',
   config = function() vim.keymap.set('n', '<Leader>bd', ':Bdelete<CR>')
   end
+})
+
+use({
+  'nvim-telescope/telescope.nvim',
+  requires = {
+    'nvim-lua/plenary.nvim',
+    'nvim-telescope/telescope-live-grep-args.nvim',
+    { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+  },
+  config = function()
+    require('redeemefy/plugins/telescope')
+  end,
 })
 
 if packer_bootstrap then

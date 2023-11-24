@@ -1,0 +1,39 @@
+-- local actions = require('telescope.actions')
+local k = vim.keymap
+
+vim.cmd([[
+highlight link TelescopePromptTitle PMenuSel
+highlight link TelescopePreviewTitle PMenuSel
+highlight link TelescopePromptNormal NormalFloat
+highlight link TelescopePromptBorder FloatBorder
+highlight link TelescopeNormal CursorLine
+]])
+
+require('telescope').setup({
+	defaults = {
+		path_display = { truncate = 1 },
+		prompt_prefix = '   ',
+		selection_caret = ' ',
+		layout_config = {
+			prompt_position = 'top',
+		},
+		sorting_strategy = 'ascending',
+		mappings = {},
+		file_ignore_patterns = { '.git/' },
+	},
+	pickers = {
+		find_files = {
+			hidden = true,
+		},
+		oldfiles = {
+			prompt_title = 'History',
+		},
+	},
+})
+
+require('telescope').load_extension('fzf')
+require('telescope').load_extension('live_grep_args')
+
+k.set('n', '<Leader>tf', [[<CMD>lua require('telescope.builtin').find_files()<CR>]])
+k.set('n', '<Leader>tb', [[<CMD>lua require('telescope.builtin').buffers()<CR>]])
+k.set('n', '<Leader>tg', [[<CMD>lua require('telescope.builtin').extensions.live_grep_args.live_grep_args()<CR>]])

@@ -11,9 +11,9 @@ local k = vim.keymap
 k.set('i', 'jj', '<ESC>')
 
 -- Open nvim setting files
-k.set('n', '<leader>nk', ':e ~/workspace/dotfiles/nvim/lua/redeemefy/keymaps.lua<CR>')
-k.set('n', '<leader>np', ':e ~/workspace/dotfiles/nvim/lua/redeemefy/plugins.lua<CR>')
-k.set('n', '<leader>no', ':e ~/workspace/dotfiles/nvim/lua/redeemefy/options.lua<CR>')
+k.set('n', '<leader>ek', ':e ~/workspace/dotfiles/nvim/lua/redeemefy/keymaps.lua<CR>')
+k.set('n', '<leader>ep', ':e ~/workspace/dotfiles/nvim/lua/redeemefy/plugins.lua<CR>')
+k.set('n', '<leader>eo', ':e ~/workspace/dotfiles/nvim/lua/redeemefy/options.lua<CR>')
 
 -- Easier way to write/save a file
 k.set('n', '<Leader>s', ':w<CR>')
