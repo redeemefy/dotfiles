@@ -1,3 +1,6 @@
+--[[
+  Eventually swap Packer for Lazy
+--]]
 local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -116,13 +119,32 @@ use({
   end
 })
 
+-- Status line
+use({
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+  config = function()
+    require('lualine').setup()
+  end,
+})
+
+-- Display buffers as tabs
+use({
+  'akinsho/bufferline.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+  after = 'catppuccin',
+  config = function()
+    require('redeemefy/plugins/bufferline')
+  end
+})
+
 if packer_bootstrap then
   require('packer').sync()
 end
 
 vim.cmd([[
-augroup packer_user_config
-autocmd!
-autocmd BufWritePost plugins.lua source <afile>
-augroup end
+  augroup packer_user_config
+  autocmd!
+  autocmd BufWritePost plugins.lua source <afile>
+  augroup end
 ]])
