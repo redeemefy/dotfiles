@@ -58,6 +58,7 @@ use({
 
     -- NvinTree
     vim.api.nvim_set_hl(0, 'NvimTreeIndentMarker', { fg = vim.api.nvim_get_hl_by_name('CursorLine', true).background })
+    vim.api.nvim_set_hl(0, 'NvimTreeNormal', { bg = vim.api.nvim_get_hl_by_name('Normal', true).background })
   end
 })
 
@@ -135,6 +136,25 @@ use({
   after = 'catppuccin',
   config = function()
     require('redeemefy/plugins/bufferline')
+  end
+})
+
+-- Display indentation line
+use({
+  'lukas-reineke/indent-blankline.nvim',
+  config = function()
+    require('redeemefy/plugins/indent-blankline')
+  end,
+})
+
+-- Dashboard
+use({ 
+  'glepnir/dashboard-nvim',
+  requires = { 'nvim-tree/nvim-web-devicons' },
+  config = function()
+    require('dashboard').setup({
+
+    })
   end
 })
 

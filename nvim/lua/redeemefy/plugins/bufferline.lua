@@ -6,7 +6,7 @@ require('bufferline').setup({
       {
         filetype = 'NvimTree',
         text = '  Files',
-        highlight = '#292c3c',
+        -- highlight = '#292c3c',
         text_align = 'left',
       },
     },
