@@ -1,5 +1,5 @@
 --[[
-	These keymappings are not specific to any plugin
+These keymappings are not specific to any plugin
 --]]
 -- <Space> for my leader key
 vim.g.mapleader = ' '
@@ -52,5 +52,8 @@ k.set('i', '<C-k>', '<ESC>:move -2<CR>==gi')
 k.set('n', '<C-j>', ':move +1<CR>==')
 k.set('n', '<C-k>', ':move -2<CR>==')
 k.set('v', '<C-j>', ":move '>+1<CR>gv==gv")
-k.set('v', '<C-k>', ":move <-2<CR>gv=gv")
+k.set('v', '<C-k>', ":move '<-2<CR>gv=gv")
+
+-- Terminal
+k.set('n', '<Leader>to', ':ToggleTerm<CR>')
 

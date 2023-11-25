@@ -125,7 +125,11 @@ use({
   'nvim-lualine/lualine.nvim',
   requires = { 'nvim-tree/nvim-web-devicons', opt = true },
   config = function()
-    require('lualine').setup()
+    require('lualine').setup({
+      options = {
+        globalstatus = true,
+      },
+    })
   end,
 })
 
@@ -153,7 +157,34 @@ use({
   requires = { 'nvim-tree/nvim-web-devicons' },
   config = function()
     require('dashboard').setup({
+      -- Adding custom settings later
+    })
+  end
+})
 
+use({
+  'lewis6991/gitsigns.nvim',
+  config = function()
+    require('redeemefy/plugins/gitsigns')
+  end,
+})
+
+use({
+  'akinsho/toggleterm.nvim', tag = '*', config = function()
+    require("toggleterm").setup({
+      direction = 'float',
+      highlights = {
+        NormalFloat = {
+          guibg = '#292c3c',
+        },
+        FloatBorder = {
+          guifg = '#292c3c',
+          guibg = '#292c3c',
+        }
+      },
+      float_opts = {
+        height = 10,
+      },
     })
   end
 })

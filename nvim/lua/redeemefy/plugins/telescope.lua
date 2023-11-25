@@ -38,3 +38,5 @@ k.set('n', '<Leader>tg', [[<CMD>lua require('telescope').extensions.live_grep_ar
 k.set('n', '<Leader>th', [[<CMD>lua require('telescope.builtin').oldfiles({ prompt_title = 'History' })<CR>]])
 k.set('n', '<Leader>ts', [[<CMD>lua require('telescope.builtin').lsp_document_symbols({ prompt_title = 'Document Symbols' })<CR>]])
 k.set('n', '<Leader>tS', [[<CMD>lua require('telescope.builtin').lsp_workspace_symbols({ prompt_title = 'Workspace Symbols' })<CR>]])
+
+k.set('n', '<Leader>tk', [[<CMD>lua require('telescope.builtin').keymaps()<CR>]], { noremap = true, silent = true })

@@ -13,6 +13,7 @@ o.mouse = 'a'                                   -- enable mouse for all modes
 o.termguicolors = true
 -- o.spell = true
 -- o.cursorline = true
+o.signcolumn = 'yes:1'
 o.ignorecase = true
 o.smartcase = true
 o.list = false                                  -- show tabs and spaces
