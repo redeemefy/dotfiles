@@ -170,23 +170,11 @@ use({
 })
 
 use({
-  'akinsho/toggleterm.nvim', tag = '*', config = function()
-    require("toggleterm").setup({
-      direction = 'float',
-      highlights = {
-        NormalFloat = {
-          guibg = '#292c3c',
-        },
-        FloatBorder = {
-          guifg = '#292c3c',
-          guibg = '#292c3c',
-        }
-      },
-      float_opts = {
-        height = 10,
-      },
-    })
-  end
+  'akinsho/toggleterm.nvim', 
+  tag = '*', 
+  config = function()
+    require('redeemefy/plugins/toggleterm')
+  end,
 })
 
 if packer_bootstrap then
