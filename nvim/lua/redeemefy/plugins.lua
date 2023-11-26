@@ -129,6 +129,13 @@ use({
       options = {
         globalstatus = true,
       },
+      sections = {
+        lualine_b = {
+          'branch',
+          'diff',
+          '"󰀂 "..tostring(#vim.tbl_keys(vim.lsp.buf_get_clients()))'
+        },
+      },
     })
   end,
 })
