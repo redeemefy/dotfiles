@@ -152,7 +152,7 @@ use({
 })
 
 -- Dashboard
-use({ 
+use({
   'glepnir/dashboard-nvim',
   requires = { 'nvim-tree/nvim-web-devicons' },
   config = function()
@@ -170,8 +170,8 @@ use({
 })
 
 use({
-  'akinsho/toggleterm.nvim', 
-  tag = '*', 
+  'akinsho/toggleterm.nvim',
+  tag = '*',
   config = function()
     require('redeemefy/plugins/toggleterm')
   end,
@@ -185,6 +185,18 @@ use({
   end,
   config = function()
     require('redeemefy.plugins/treesitter')
+  end
+})
+
+-- Language Server Protocol
+use({
+  'neovim/nvim-lspconfig',
+  requires = {
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim'
+  },
+  config  = function()
+    require('redeemefy/plugins/lspconfig')
   end
 })
 
