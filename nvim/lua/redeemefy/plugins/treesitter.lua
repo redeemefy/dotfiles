@@ -25,4 +25,6 @@ require('nvim-treesitter.configs').setup({
     -- check spelling only on strings
     additional_vim_regex_highlighting = true,
   },
+  -- future treesitter plugins [context_commentstring, textobjects]
+  -- https://github.com/nvim-treesitter/nvim-treesitter/wiki/Extra-modules-and-plugins
 })
