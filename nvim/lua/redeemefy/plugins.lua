@@ -177,6 +177,17 @@ use({
   end,
 })
 
+-- Treesitter for better highlighting
+use({
+  'nvim-treesitter/nvim-treesitter',
+  run = function()
+    require('nvim-treesitter.install').update({ with_sync = true })
+  end,
+  config = function()
+    require('redeemefy.plugins/treesitter')
+  end
+})
+
 if packer_bootstrap then
   require('packer').sync()
 end
