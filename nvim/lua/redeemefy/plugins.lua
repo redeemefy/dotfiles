@@ -207,6 +207,23 @@ use({
   end
 })
 
+-- Completion engine
+use({
+  'hrsh7th/nvim-cmp',
+  requires  = {
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-nvim-lsp-signature-help',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/LuaSnip',
+    'hrsh7th/cmp_luasnip',
+    'hrsh7th/lspkind-nvim',
+  },
+  config = function()
+    require('redeemefy/plugins/cmp')
+  end
+})
+
 if packer_bootstrap then
   require('packer').sync()
 end

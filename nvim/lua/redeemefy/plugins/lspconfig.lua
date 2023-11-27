@@ -8,6 +8,10 @@ require('mason-lspconfig').setup({ automatic_installation = true })
 require('lspconfig').lua_ls.setup({
   settings = {
     Lua = {
+      runtime = {
+        version = 'LuaJIT',
+        path = 'runtime_path',
+      },
       telemetry = { enable = false },
       diagnostics = {
         globals = { 'vim' }
@@ -43,3 +47,17 @@ vim.keymap.set('n', 'gi', ':Telescope lsp_implementations<CR>')
 vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>')
 vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
+
+-- Which language server diagnostic is coming from
+vim.diagnostic.config({
+  virtual_text = false,
+  float = {
+    source = true
+  },
+})
+
+-- Diagnostic icons
+vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
+vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
+vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
+vim.fn.sign_define('DiagnosticSignHint', { text = '󰌵', texthl = 'DiagnosticSignHint' })
