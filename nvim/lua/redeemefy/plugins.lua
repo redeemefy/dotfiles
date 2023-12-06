@@ -200,7 +200,10 @@ use({
   'neovim/nvim-lspconfig',
   requires = {
     'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim'
+    'williamboman/mason-lspconfig.nvim',
+    'b0o/schemastore.nvim',
+    'jose-elias-alvarez/null-ls.nvim',
+    'jayp0521/mason-null-ls.nvim',
   },
   config  = function()
     require('redeemefy/plugins/lspconfig')
@@ -215,9 +218,9 @@ use({
     'hrsh7th/cmp-nvim-lsp-signature-help',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
-    'hrsh7th/LuaSnip',
-    'hrsh7th/cmp_luasnip',
-    'hrsh7th/lspkind-nvim',
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip',
+    'onsails/lspkind-nvim',
   },
   config = function()
     require('redeemefy/plugins/cmp')

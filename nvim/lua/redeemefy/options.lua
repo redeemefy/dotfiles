@@ -9,6 +9,7 @@ o.wrap = false
 o.number = true
 o.relativenumber = true
 o.wildmode = 'longest:full,full'                -- complete the longest common match, and allow tabbing the result to fully complete them
+o.completeopt = 'menuone,longest,preview'        -- cmp behavior
 o.mouse = 'a'                                   -- enable mouse for all modes
 o.termguicolors = true
 -- o.spell = true

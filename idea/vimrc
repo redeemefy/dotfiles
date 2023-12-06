@@ -1,0 +1,35 @@
+let mapleader = " "
+
+""" Defaults
+set showmode
+set incsearch
+set ignorecase
+set smartcase
+set number
+set relativenumber
+set backspace=indent,eol,start
+
+""" Keymaps
+inoremap jj <Esc>
+nmap <leader>p <Action>(SearchEverywhere)
+nmap <leader>k <Action>(QuickJavaDoc)
+nmap <leader>d <Action>(ShowErrorDescription)
+nmap <leader>da <Action>(ShowIntentionActions)
+nmap <leader>ef <M-6>
+
+""" Window management & navigation
+nmap <leader>sr <Action>(SplitVertically)
+nmap <C-h> <C-w><C-h>
+nmap <C-l> <C-w><C-l>
+
+""" Search symbols in file or project
+nmap <leader>fs <Action>(FileStructurePopup)
+nmap <leader>ps <Action>(GotoSymbol)
+
+""" Refactoring and formatting
+nmap <leader>r <Action>(RefactoringMenu)
+vmap <leader>r <Action>(RefactoringMenu)
+nmap <leader>fc <Action>(ReformatCode)
+
+map <C-j> <Action>(MoveLineDown)
+map <C-k> <Action>(MoveLineUp)
