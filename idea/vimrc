@@ -15,7 +15,7 @@ nmap <leader>p <Action>(SearchEverywhere)
 nmap <leader>k <Action>(QuickJavaDoc)
 nmap <leader>d <Action>(ShowErrorDescription)
 nmap <leader>da <Action>(ShowIntentionActions)
-nmap <leader>ef <M-6>
+nmap <leader>e <Action>(ActivateProblemsViewToolWindow)
 
 """ Window management & navigation
 nmap <leader>sr <Action>(SplitVertically)

@@ -13,3 +13,6 @@ ln -s $DOTFILES/nvim $HOME/.config/nvim
 
 rm -f $HOME/.ideavimrc
 ln -s $DOTFILES/idea/vimrc $HOME/.ideavimrc
+
+rm -rf $HOME/.config/wezterm
+ln -s $DOTFILES/wezterm $HOME/.config/wezterm
