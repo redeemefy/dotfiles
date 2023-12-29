@@ -16,3 +16,6 @@ ln -s $DOTFILES/idea/vimrc $HOME/.ideavimrc
 
 rm -rf $HOME/.config/wezterm
 ln -s $DOTFILES/wezterm $HOME/.config/wezterm
+
+rm -f $HOME/.iex.exs
+ln -s $DOTFILES/elixir/.iex.exs $HOME/.iex.exs
