@@ -13,12 +13,12 @@ require('nvim-treesitter.configs').setup({
     'csv',
     'dockerfile',
     'bash',
-    'php',
-    'phpdoc',
     'regex',
-    'rust',
     'sql',
     'tsv',
+    'elixir',
+    'eex',
+    'heex'
   },
   highlight = {
     enable = true,

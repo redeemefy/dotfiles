@@ -23,9 +23,6 @@ require('lspconfig').lua_ls.setup({
   }
 })
 
--- PHP
-require('lspconfig').intelephense.setup({ capabilities = capabilities })
-
 -- JS family
 require('lspconfig').volar.setup({
   capabilities = capabilities,
@@ -34,7 +31,6 @@ require('lspconfig').volar.setup({
     'javascript',
     'javascriptreact',
     'typescriptreact',
-    'vue',
     'json'
   }
 })

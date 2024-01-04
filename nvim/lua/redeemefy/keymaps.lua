@@ -30,6 +30,7 @@ k.set('n', '<Leader>ri', '<ESC>ffVG=')
 -- Buffer management
 k.set('n', '<Leader>bn', ':bn<CR>')
 k.set('n', '<Leader>bp', ':bp<CR>')
+k.set('n', '<Leader>bc', ':bdelete<CR>')
 
 -- Window navigation
 k.set('n', '<C-h>', '<C-w>h')
