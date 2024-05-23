@@ -2,20 +2,27 @@ let mapleader = " "
 
 """ Defaults
 set showmode
+set visualbell
 set incsearch
 set ignorecase
 set smartcase
+set hlsearch
 set number
 set relativenumber
 set backspace=indent,eol,start
+set surround
+set nerdtree
 
 """ Keymaps
 inoremap jj <Esc>
 nmap <leader>p <Action>(SearchEverywhere)
+nmap <leader>ff <Action>(FindInPath)
+nmap <leader>nh :noh<return><esc>
 nmap <leader>k <Action>(QuickJavaDoc)
 nmap <leader>d <Action>(ShowErrorDescription)
 nmap <leader>da <Action>(ShowIntentionActions)
 nmap <leader>e <Action>(ActivateProblemsViewToolWindow)
+map <leader>b :NERDTreeToggle<CR>
 
 """ Git
 
@@ -35,3 +42,9 @@ nmap <leader>fc <Action>(ReformatCode)
 
 map <C-j> <Action>(MoveLineDown)
 map <C-k> <Action>(MoveLineUp)
+
+""" Plugins
+Plug 'terryma/vim-multiple-cursors'
+map mc <A-n>
+map mx <A-x>
+map mp <A-p>
