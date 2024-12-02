@@ -15,7 +15,7 @@ set nerdtree
 
 """ Keymaps
 inoremap jj <Esc>
-nmap <leader>p <Action>(SearchEverywhere)
+nmap <leader>p :action SearchEverywhere<CR>
 nmap <leader>ff <Action>(FindInPath)
 nmap <leader>nh :noh<return><esc>
 nmap <leader>k <Action>(QuickJavaDoc)
@@ -23,6 +23,7 @@ nmap <leader>d <Action>(ShowErrorDescription)
 nmap <leader>da <Action>(ShowIntentionActions)
 nmap <leader>e <Action>(ActivateProblemsViewToolWindow)
 map <leader>b :NERDTreeToggle<CR>
+nmap <leader>vr <Action>(IdeaVim.ReloadVimRc.reload)
 
 """ Git
 
@@ -30,16 +31,18 @@ map <leader>b :NERDTreeToggle<CR>
 nmap <leader>sr <Action>(SplitVertically)
 nmap <C-h> <C-w><C-h>
 nmap <C-l> <C-w><C-l>
+nmap <leader>t <Action>(ActivateTerminalToolWindow)
 
 """ Search symbols in file or project
 nmap <leader>fs <Action>(FileStructurePopup)
 nmap <leader>ps <Action>(GotoSymbol)
+nmap <leader>gs <Action>(GotoDeclaration)
 
 """ Refactoring and formatting
 nmap <leader>r <Action>(RefactoringMenu)
 vmap <leader>r <Action>(RefactoringMenu)
+nmap <leader>r <Action>(Refactorings.QuickListPopupAction)
 nmap <leader>fc <Action>(ReformatCode)
-
 map <C-j> <Action>(MoveLineDown)
 map <C-k> <Action>(MoveLineUp)
 
