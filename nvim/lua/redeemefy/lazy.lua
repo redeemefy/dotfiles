@@ -15,4 +15,3 @@ opt.rtp:prepend(lazypath)
 
 require("lazy").setup({ import = "redeemefy.plugins" })
 
-vim.cmd.colorscheme("catppuccin")
