@@ -13,5 +13,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ import = "redeemefy.plugins" })
+require("lazy").setup({
+    import = "redeemefy.plugins",
+    change_detection = {
+        enabled = false,
+    },
+})
 
