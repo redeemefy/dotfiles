@@ -1,9 +1,4 @@
+-- https://github.com/bluz71/nvim-linefly
 return {
-    "nvim-lua/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-        require("lualine").setup({
-            options = {}
-        })
-    end,
+    "bluz71/nvim-linefly",
 }
