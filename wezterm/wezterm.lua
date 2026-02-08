@@ -6,7 +6,10 @@ if wezterm.config_builder then
 end
 
 config.color_scheme = 'Catppuccin Latte'
-config.font = wezterm.font('Operator Mono', { weight = 'Book' })
+config.font = wezterm.font_with_fallback({
+    { family = 'Operator Mono', weight = 'Book' },
+    'JetBrainsMono Nerd Font',
+})
 config.font_size = 18.0
 
 -- Tab bar colors (Catppuccin Latte)
