@@ -32,7 +32,7 @@ The `nvim/` directory is an **NvChad v2.5** configuration. Key architecture:
 
 To add a new LSP server: edit `lua/configs/lspconfig.lua` and add to the `servers` table, then ensure the server is installed. To add a formatter: edit `lua/configs/conform.lua`.
 
-Note: `nvim/` has its own `.git` directory (separate from the dotfiles repo). The untracked `nvim/` in git status is the new personal setup being developed alongside the NvChad-based one.
+The nvim config files are tracked directly in this repo (no submodule). NvChad core updates itself via lazy.nvim at runtime.
 
 ## Conventions
 
