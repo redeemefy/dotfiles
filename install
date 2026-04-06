@@ -19,3 +19,7 @@ ln -s $DOTFILES/wezterm $HOME/.config/wezterm
 
 rm -f $HOME/.iex.exs
 ln -s $DOTFILES/elixir/.iex.exs $HOME/.iex.exs
+
+mkdir -p $HOME/.claude
+rm -f $HOME/.claude/statusline-command.sh
+ln -s $DOTFILES/claude/statusline-command.sh $HOME/.claude/statusline-command.sh
