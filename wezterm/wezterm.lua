@@ -11,6 +11,7 @@ config.font = wezterm.font_with_fallback({
     'JetBrainsMono Nerd Font',
 })
 config.font_size = 18.0
+config.use_ime = true
 
 -- Tab bar colors (Catppuccin Latte)
 config.window_frame = {
