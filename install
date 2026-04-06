@@ -20,6 +20,12 @@ ln -s $DOTFILES/wezterm $HOME/.config/wezterm
 rm -f $HOME/.iex.exs
 ln -s $DOTFILES/elixir/.iex.exs $HOME/.iex.exs
 
-mkdir -p $HOME/.claude
+mkdir -p $HOME/.claude/hooks
 rm -f $HOME/.claude/statusline-command.sh
 ln -s $DOTFILES/claude/statusline-command.sh $HOME/.claude/statusline-command.sh
+rm -f $HOME/.claude/CLAUDE.md
+ln -s $DOTFILES/claude/CLAUDE.md $HOME/.claude/CLAUDE.md
+rm -f $HOME/.claude/settings.json
+ln -s $DOTFILES/claude/settings.json $HOME/.claude/settings.json
+rm -f $HOME/.claude/hooks/enforce-conventions.sh
+ln -s $DOTFILES/claude/hooks/enforce-conventions.sh $HOME/.claude/hooks/enforce-conventions.sh

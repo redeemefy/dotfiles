@@ -1,0 +1,21 @@
+{
+  "effortLevel": "high",
+  "statusLine": {
+    "type": "command",
+    "command": "sh $HOME/.claude/statusline-command.sh"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash $HOME/.claude/hooks/enforce-conventions.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

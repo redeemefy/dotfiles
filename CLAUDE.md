@@ -18,6 +18,10 @@ Run `./install` to symlink all configs to their expected locations. The script d
 | `idea/vimrc` | `~/.ideavimrc` |
 | `wezterm/` | `~/.config/wezterm` |
 | `elixir/.iex.exs` | `~/.iex.exs` |
+| `claude/CLAUDE.md` | `~/.claude/CLAUDE.md` |
+| `claude/settings.json` | `~/.claude/settings.json` |
+| `claude/statusline-command.sh` | `~/.claude/statusline-command.sh` |
+| `claude/hooks/enforce-conventions.sh` | `~/.claude/hooks/enforce-conventions.sh` |
 
 ## Neovim Configuration
 
