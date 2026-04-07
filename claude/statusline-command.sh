@@ -26,7 +26,7 @@ fi
 remaining=$(echo "$input" | jq -r '.context_window.remaining_percentage // empty')
 
 # Session cost
-cost=$(echo "$input" | jq -r 'if .session.cost != null then .session.cost else "" end')
+cost=$(echo "$input" | jq -r 'if .session.cost != null then .session.cost else "0.00" end')
 
 # Color palette
 # Bold magenta bg-style for dir segment: bright white text on magenta
@@ -36,7 +36,7 @@ SEP=$(printf '\xee\x82\xb0')        # U+E0B0 powerline right solid arrow
 BRANCH_SYM=$(printf '\xef\x90\x87') # U+F407 git-merge (Octicons)
 FOLDER_SYM=$(printf '\xef\x81\xbc') # U+F07C folder open icon (Nerd Font)
 ROBOT=$(printf '\xf3\xb0\x9a\xa9')  # U+F06A9 robot (Nerd Font)
-DOLLAR=$(printf '\xef\x85\x95')    # U+F155 dollar sign (Nerd Font)
+MONEYBAG=$(printf '\xf0\x9f\x92\xb0') # U+1F4B0 money bag emoji
 
 # Segment 1 — directory: magenta text, bold, with folder icon
 printf "\033[0;30m%s\033[0m\033[1;35m  %s\033[0m" "$FOLDER_SYM" "$dir"
@@ -52,7 +52,7 @@ fi
 
 if [ -n "$cost" ]; then
   printf " | "
-  printf "\033[0;30m%s\033[0m\033[1;32m $%s\033[0m" "$DOLLAR" "$cost"
+  printf "%s\033[1;32m $%s\033[0m" "$MONEYBAG" "$cost"
 fi
 
 if [ -n "$remaining" ]; then
