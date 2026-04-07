@@ -26,7 +26,8 @@ fi
 remaining=$(echo "$input" | jq -r '.context_window.remaining_percentage // empty')
 
 # Session cost
-cost=$(echo "$input" | jq -r 'if .session.cost != null then .session.cost else "0.00" end')
+raw_cost=$(echo "$input" | jq -r '.cost.total_cost_usd // 0')
+cost=$(printf "%.2f" "$raw_cost")
 
 # Color palette
 # Bold magenta bg-style for dir segment: bright white text on magenta
