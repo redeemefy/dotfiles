@@ -1,0 +1,8 @@
+# Entry point for zsh. Sources every `*.zsh` file in ./conf.d/ in lexical
+# order. Each conf.d file owns a single concern — keep them small, name
+# them with a numeric prefix so load order is explicit.
+
+for _f in "$HOME/workspace/dotfiles/zsh/conf.d/"*.zsh; do
+  [ -r "$_f" ] && source "$_f"
+done
+unset _f

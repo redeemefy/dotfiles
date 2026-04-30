@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-Personal dotfiles repository managing configuration for: Neovim, Wezterm, Tmux, Kitty, IdeaVim, and Elixir IEx.
+Personal dotfiles repository managing configuration for: Zsh, Neovim, Wezterm, and IdeaVim.
 
 ## Installation
 
@@ -12,16 +12,16 @@ Run `./install` to symlink all configs to their expected locations. The script d
 
 | Source | Target |
 |--------|--------|
-| `kitty/` | `~/.config/kitty` |
-| `tmux/tmux.conf` | `~/.tmux.conf` |
 | `nvim/` | `~/.config/nvim` |
 | `idea/vimrc` | `~/.ideavimrc` |
 | `wezterm/` | `~/.config/wezterm` |
-| `elixir/.iex.exs` | `~/.iex.exs` |
-| `claude/CLAUDE.md` | `~/.claude/CLAUDE.md` |
-| `claude/settings.json` | `~/.claude/settings.json` |
-| `claude/statusline-command.sh` | `~/.claude/statusline-command.sh` |
-| `claude/hooks/enforce-conventions.sh` | `~/.claude/hooks/enforce-conventions.sh` |
+| `zsh/zshrc` | `~/.zshrc` |
+
+## Zsh Configuration
+
+The `zsh/` directory holds a small modular setup. `zsh/zshrc` is the entry point (symlinked to `~/.zshrc`); it sources every `*.zsh` file in `zsh/conf.d/` in lexical order. Each file in `conf.d/` owns one concern — numeric prefixes (`00-`, `10-`, `20-`, ...) make load order explicit. To add a new concern, drop a new `NN-name.zsh` file in `conf.d/`; don't grow existing files past their responsibility.
+
+The `40-autosuggestions.zsh` file is defensive: it sources zsh-autosuggestions only if the brew package is installed, so a fresh machine without the package still starts a clean shell. Installing it is optional: `brew install zsh-autosuggestions`.
 
 ## Neovim Configuration
 
@@ -40,7 +40,6 @@ The nvim config files are tracked directly in this repo (no submodule). NvChad c
 
 ## Conventions
 
-- Font: **Operator Mono** across terminal configs (Wezterm 18pt, Kitty 18pt)
+- Font: **OperatorMono Nerd Font** in Wezterm (18pt) — patched build with Nerd Font glyphs so prompt icons render
 - Theme preference: light themes (github_light in nvim, Catppuccin Latte in Wezterm)
-- Tmux prefix: `Ctrl+Space`
 - Vim leader: `Space` (in IdeaVim config)

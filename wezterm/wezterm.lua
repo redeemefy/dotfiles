@@ -6,10 +6,7 @@ if wezterm.config_builder then
 end
 
 config.color_scheme = 'Catppuccin Latte'
-config.font = wezterm.font_with_fallback({
-    { family = 'Operator Mono', weight = 'Book' },
-    'JetBrainsMono Nerd Font',
-})
+config.font = wezterm.font('OperatorMono Nerd Font')
 config.font_size = 18.0
 config.use_ime = true
 
@@ -17,7 +14,7 @@ config.use_ime = true
 config.window_frame = {
     active_titlebar_bg = '#eff1f5',
     inactive_titlebar_bg = '#e6e9ef',
-    font = wezterm.font('Operator Mono', { weight = 'Bold' }),
+    font = wezterm.font('OperatorMono Nerd Font', { weight = 'Bold' }),
     font_size = 14.0,
 }
 
