@@ -1,0 +1,14 @@
+# Git aliases — subset of oh-my-zsh's git plugin, just the ones in regular use.
+
+alias gaa='git add --all'
+alias gcam='git commit -am'
+alias gst='git status'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gcm='git checkout main'
+alias gp='git push'
+alias gpf='git push --force-with-lease'
+alias gpl='git pull'
+alias gf='git fetch'
+alias glo='git log --oneline --decorate'
+alias glog='git log --oneline --decorate --graph'
