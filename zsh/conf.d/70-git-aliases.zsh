@@ -1,6 +1,7 @@
 # Git aliases — subset of oh-my-zsh's git plugin, just the ones in regular use.
 
 alias gaa='git add --all'
+alias ga='git add'
 alias gcam='git commit -am'
 alias gst='git status'
 alias gco='git checkout'
